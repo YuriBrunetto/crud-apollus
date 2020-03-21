@@ -9,6 +9,11 @@
   --text-placeholder: #666;
 }
 
+::selection {
+  background-color: var(--main-color);
+  color: var(--dark-color);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -28,4 +33,58 @@ textarea {
   font-family: 'Roboto', sans-serif;
   outline: 0;
   border: 0;
+}
+
+.common-title {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.common-text {
+  font-size: 16px;
+  color: var(--text-color);
+  line-height: 150%;
+}
+
+// forms
+.form-group {
+  margin-top: 8px;
+}
+
+input {
+  appearance: none;
+  height: 52px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s;
+  font-weight: bold;
+
+  &:focus {
+    border-color: var(--main-color);
+  }
+}
+
+.btn {
+  height: 52px;
+  background: linear-gradient(
+    150deg,
+    var(--main-color) 0%,
+    var(--sec-color) 100%
+  );
+  color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 6px 0 24px rgba(0, 0, 0, 0.3);
+  }
 }
